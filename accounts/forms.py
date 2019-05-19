@@ -9,15 +9,11 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         fields  = ('username', 'email','password1','password2')
         model = get_user_model()
-        # widgets={
-        #     'subject': UserCreationForm.TextInput(attrs={'style': 'width:20px'}),
-        #     'business': UserCreationForm.Select(attrs={'style': 'width:20px'})
-        #     }          
 
-#Setting up user label for Clark Name and Email
+#Setting up user label 
     def __init__(self, *args, **kwargs):
         
         super().__init__(*args, **kwargs)
         self.fields['username'].label = 'Registration Number'
-        self.fields['email'].label = 'Token'
+        self.fields['email'].label = 'Email Address'
   

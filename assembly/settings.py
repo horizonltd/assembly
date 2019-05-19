@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'accounts',
     'resources',
     'rest_framework.authtoken',
+    'bootstrap4',
 
 ]
 

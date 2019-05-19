@@ -6,4 +6,4 @@ from .import models
 class DownloadsSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Downloads
-        fields = ('File_Title','File','Author','File_Description')
+        fields = ('File_Title','File','Author','File_Description','Conference')

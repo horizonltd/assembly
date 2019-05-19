@@ -14,8 +14,12 @@ urlpatterns = [
     path('api/login', login),
     path('api/attendees/', include('attendees.urls')),
     path('api/note/', include('note.urls')),
+    path('api/resources/', include('resources.urls')),
   
     # path('api/sampleapi', sample_api),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
+    path('thanks/', views.ThanksPage.as_view(), name="thanks"),
+    path('test/', views.TestPage.as_view(), name='test'),
+    path('advice/', views.Advice.as_view(), name='advice'),
 ]

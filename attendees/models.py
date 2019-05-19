@@ -22,10 +22,10 @@ class Members(models.Model):
     entry_types = models.ForeignKey(TypeOfMembership, related_name='Member_Entry', on_delete=models.CASCADE, default='')
 
     class Meta:
-        unique_together = ('membership_registration_number', 'phone_number')
+        unique_together = ('First_name', 'phone_number')
         ordering = ['phone_number']
 
     def __str__(self):
-        return '%d: %s' % (self.phone_number, self.membership_registration_number)
+        return '%d: %s' % (self.phone_number, self.First_name)
 
 

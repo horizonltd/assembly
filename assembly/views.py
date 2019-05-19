@@ -6,6 +6,28 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.status import (HTTP_200_OK, HTTP_400_BAD_REQUEST,
                                    HTTP_404_NOT_FOUND)
+                                   
+from django.views.generic import TemplateView
+from django.http import HttpResponse, HttpResponseRedirect
+
+
+class HomePage(TemplateView):
+    template_name = 'index.html'
+class Advice(TemplateView):
+    template_name = 'advice.html'
+
+# This view are from templates folder
+class ThanksPage(TemplateView):
+    template_name = "thanks.html"
+
+
+class TestPage(TemplateView):
+    template_name = "test.html"
+
+
+
+
+
 
 
 
