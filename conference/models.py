@@ -5,6 +5,7 @@ from django.utils.text import slugify
 
 #Event Model
 class Conference(models.Model):
+    featured_image = models.ImageField(default='')
     conference_paper = models.CharField(max_length=100, default='')
     conference_title = models.CharField(max_length=100, default='')
     upload_paper = models.FileField()
